@@ -1,26 +1,28 @@
 // StringCalculator.js
 class StringCalculator{
 	constructor() {}
-		AddTwoNumbers(number1, number2){
-			if(!isNaturalNumber(number1))
-				number1 = 0;
-			if(!isNaturalNumber(number2))
-				number2 = 0;
-
-			return String(parseInt(number1) + parseInt(number2));
-		} 
 		PrintFizzOrBuzz(){
-			let counter = 0;
+			let counterFizzBuzz = 0
+			let counterFizz = 0
+			
 			for (let i = 1; i <= 100; i++) {
 			if(i % 3 === 0 && i % 5 === 0){
 				console.log("FizzBuzz")
-				counter++
-				
+				counterFizzBuzz++	
+			}else if(i % 3 == 0){
+				console.log("Fizz")
+				counterFizz++
 			}
 				
 			}
-			return counter;
+			return new ReturnValues(counterFizzBuzz, counterFizz);
 		}
 
 }
  
+class ReturnValues{
+	constructor(FizzBuzz,Fizz) {
+	this.FizzBuzz = FizzBuzz;
+	this.Fizz = Fizz;		
+	}
+}
