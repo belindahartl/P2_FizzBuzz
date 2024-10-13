@@ -3,5 +3,8 @@ describe('String Calculator', function() {
 		calculator = new StringCalculator();
 	});
 
+	it('should return FizzBuzz six times', function() {
+		expect(calculator.PrintFizzOrBuzz()).toEqual(6)
+	});
 	
 });
