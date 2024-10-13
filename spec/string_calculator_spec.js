@@ -11,5 +11,9 @@ describe('String Calculator', function() {
 		let result = calculator.PrintFizzOrBuzz()
 		expect(result.Fizz).toEqual(27)
 	});
+	it('should return Buzz 14 times', function() {
+		let result = calculator.PrintFizzOrBuzz()
+		expect(result.Buzz).toEqual(14)
+	});
 	
 });
